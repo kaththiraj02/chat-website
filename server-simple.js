@@ -22,7 +22,7 @@ const SECRET_KEY = 'your-secret-key-change-this-in-production';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static('public'));
+app.use(express.static('__dirname'));
 
 // Authentication middleware
 const authenticateToken = (req, res, next) => {
