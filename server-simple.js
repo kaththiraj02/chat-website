@@ -22,7 +22,7 @@ const SECRET_KEY = 'your-secret-key-change-this-in-production';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-path.join(__dirname, 'public')const authenticateToken = (req, res, next) => {
+path.join(__dirname, 'public');const authenticateToken = (req, res, next) => {
   const token = req.cookies.token;
   if (!token) return res.status(401).json({ error: 'Access denied' });
 
