@@ -37,6 +37,11 @@ path.join(__dirname, 'public');const authenticateToken = (req, res, next) => {
 
 // Routes
 
+// Serve index.html for root path
+app.get('/', (req, res) => {
+      res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Register
 app.post('/api/register', async (req, res) => {
   try {
